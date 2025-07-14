@@ -37,7 +37,8 @@ class I2cDevice:
         self.scl = scl
         self.scl_o = scl_o
 
-        super().__init__(*args, **kwargs)
+        # TypeError: object.__init__() takes exactly one argument (the instance to initialize)
+        #super().__init__(*args, **kwargs)
 
         if self.sda_o is not None:
             self.sda_o.setimmediatevalue(1)
